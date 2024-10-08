@@ -4,18 +4,18 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Beranda - Tema Astronot</title>
- <link rel="stylesheet" href="styles.css">
- <link rel="manifest" href="manifest.json">
- <script src="apps.js"></script>
+ <link rel="stylesheet" href="/TugasDesainWebReza/styles.css">
+ <link rel="manifest" href="/TugasDesainWebReza/manifest.json">
+ <script src="/TugasDesainWebReza/apps.js"></script>
 </head>
 <body>
     <header>
      <h1>Selamat Datang di Dunia Astronot!</h1>
      <nav>
          <ul>
-         <li><a href="index.html">Beranda</a></li>
-         <li><a href="about.html">Tentang Kami</a></li>
-         <li><a href="hubungi-kami.html">Hubungi Kami</a></li> <!-- Nama file diperbaiki -->
+         <li><a href="/TugasDesainWebReza/index.html">Beranda</a></li>
+         <li><a href="/TugasDesainWebReza/about.html">Tentang Kami</a></li>
+         <li><a href="/TugasDesainWebReza/hubungi-kami.html">Hubungi Kami</a></li> <!-- Nama file diperbaiki -->
          </ul>
          </nav>
     </header>
@@ -33,7 +33,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js')  // Pastikan jalur ini benar
+                navigator.serviceWorker.register('/TugasDesainWebReza/service-worker.js')  // Pastikan jalur ini benar
                 .then(function(registration) {
                     console.log('Service worker registered with scope:', registration.scope);
                 }).catch(function(error) {
