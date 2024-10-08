@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tentang Kami - Tema Astronot</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="/TugasDesainWebReza/styles.css">
+    <link rel="manifest" href="/TugasDesainWebReza/manifest.json">
     <script src="apps.js"></script> <!-- Pindahkan script ini ke dalam <head> -->
 </head>
 <body>
@@ -13,9 +13,9 @@
         <h1>Tentang Kami</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="about.html">Tentang Kami</a></li>
-                <li><a href="Hubungi-Kami.html">Hubungi Kami</a></li>
+                <li><a href="/TugasDesainWebReza/index.html">Beranda</a></li>
+                <li><a href="/TugasDesainWebReza/about.html">Tentang Kami</a></li>
+                <li><a href="/TugasDesainWebReza/Hubungi-Kami.html">Hubungi Kami</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +33,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js')
+                navigator.serviceWorker.register('/TugasDesainWebReza/service-worker.js')
                 .then(function(registration) {
                     console.log('Service worker registered with scope:', registration.scope);
                 }).catch(function(error) {
