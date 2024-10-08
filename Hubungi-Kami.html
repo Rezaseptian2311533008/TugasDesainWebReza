@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Tema Astronot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="apps.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hubungi Kami</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="Hubungi-Kami.html">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Kontak Kami</h2>
+            <p>Untuk pertanyaan, saran, atau informasi lebih lanjut, silakan isi formulir di bawah ini:</p>
+            
+            <form onsubmit="return submitForm()">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="kategori">Kategori Pesan:</label>
+                <select id="kategori" name="kategori">
+                    <option value="saran">Saran</option>
+                    <option value="kritik">Kritik</option>
+                    <option value="pertanyaan">Pertanyaan</option>
+                </select>
+
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" required></textarea>
+            
+                <div class="radio-container">
+                    <label>Penerimaan Balasan:</label>
+                    <input type="radio" id="ya" name="balasan" value="ya">
+                    <label for="ya">Ya</label>
+                    <input type="radio" id="tidak" name="balasan" value="tidak">
+                    <label for="tidak">Tidak</label>
+                </div>
+                
+                <button type="submit">Kirim</button>
+            </form>
+            
+            <script>
+                function submitForm() {
+                    window.alert("Pesan berhasil dikirim!");
+                    window.location.reload();
+                    return false; // Menghentikan pengiriman form secara default
+                }
+            </script>
+        </section>
+    </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.error('Service worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

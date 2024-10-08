@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Beranda - Tema Astronot</title>
+ <link rel="stylesheet" href="styles.css">
+ <link rel="manifest" href="manifest.json">
+ <script src="apps.js"></script>
+</head>
+<body>
+    <header>
+     <h1>Selamat Datang di Dunia Astronot!</h1>
+     <nav>
+         <ul>
+         <li><a href="index.html">Beranda</a></li>
+         <li><a href="about.html">Tentang Kami</a></li>
+         <li><a href="hubungi-kami.html">Hubungi Kami</a></li> <!-- Nama file diperbaiki -->
+         </ul>
+         </nav>
+    </header>
+    <main>
+        <section>
+         <h2>Eksplorasi Luar Angkasa</h2>
+         <p>Selamat datang di platform kami yang dirancang khusus untuk menjelajahi misteri dan keajaiban alam semesta. Di sini, Anda akan menemukan beragam artikel mendalam, studi kasus, dan diskusi kritis yang mengungkap rahasia luar angkasa serta pengalaman para astronot. Bergabunglah dalam petualangan intelektual yang mengungkap inovasi terkini dan pencapaian monumental dalam eksplorasi ruang angkasa.</p>
+        </section>
+        <section>
+            <h2>Berita Terbaru</h2>
+            <p>Ikuti perkembangan terbaru dalam dunia luar angkasa melalui berita dan laporan eksklusif kami. Kami menyajikan informasi terkini mengenai penemuan astronomi, misi luar angkasa, dan teknologi canggih yang mendorong batasan eksplorasi manusia. Tetap terhubung dengan pembaruan yang akan memperluas wawasan dan memotivasi Anda untuk lebih mendalami sains antariksa.</p>
+        </section>
+    </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')  // Pastikan jalur ini benar
+                .then(function(registration) {
+                    console.log('Service worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.error('Service worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

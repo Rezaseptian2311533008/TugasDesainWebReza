@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            text-align: center;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        #offline-notification {
+            display: none;
+            padding: 15px;
+            background-color: #ffcc00;
+            border: 1px solid #cc9900;
+            border-radius: 5px;
+            color: #333;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hallo, Anda Sedang Offline</h1>
+        <p>Silahkan periksa kembali koneksi anda.</p>
+    </header>
+    
+    <div id="offline-notification">Anda sedang offline. Silakan periksa koneksi internet Anda.</div>
+
+    <script>
+        function updateOnlineStatus() {
+            var notification = document.getElementById('offline-notification');
+            if (navigator.onLine) {
+                notification.style.display = 'none';
+            } else {
+                notification.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+
+        // Initial check
+        updateOnlineStatus();
+    </script>
+</body>
+</html>

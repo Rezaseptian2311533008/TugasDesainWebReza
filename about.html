@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Tema Astronot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="apps.js"></script> <!-- Pindahkan script ini ke dalam <head> -->
+</head>
+<body>
+    <header>
+        <h1>Tentang Kami</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="Hubungi-Kami.html">Hubungi Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Visi dan Misi</h2>
+            <p>Kami bertekad untuk menjadi sumber terpercaya dalam penyampaian informasi yang mendalam dan terkini mengenai eksplorasi luar angkasa dan kehidupan astronot. Visi kami adalah memotivasi dan menginspirasi generasi masa depan untuk menembus batas-batas pengetahuan dan berani menjelajahi kedalaman misterius alam semesta. Misi kami mencakup penyampaian analisis yang cermat dan informasi terbaru yang merangsang rasa ingin tahu serta kecintaan terhadap sains dan eksplorasi antariksa.</p>
+        </section>
+        <section>
+            <h2>Tim Kami</h2>
+            <p>Tim kami merupakan kumpulan profesional dan penggemar luar angkasa yang berkomitmen tinggi, terdiri dari ilmuwan, penulis, dan pendidik yang memiliki dedikasi luar biasa terhadap penyebaran pengetahuan dan berita terbaru seputar eksplorasi ruang angkasa. Dengan latar belakang beragam dalam bidang astronomi, fisika, dan teknologi antariksa, kami bekerja secara sinergis untuk menyajikan wawasan yang mendalam dan analisis yang tajam mengenai pencapaian terbaru serta tren dalam dunia sains luar angkasa.</p>
+        </section>
+    </main>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service worker registered with scope:', registration.scope);
+                }).catch(function(error) {
+                    console.error('Service worker registration failed:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html>
