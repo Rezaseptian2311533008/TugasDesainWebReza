@@ -1,10 +1,10 @@
 const cache_name = 'v1';
 const cache_assets = [
-    'index.html',
-    'hubungi-kami.html',  // Nama file diperbaiki
-    'about.html',
-    'offline.html',
-    'styles.css',
+    '/TugasDesainWebReza/index.html',
+    '/TugasDesainWebReza/hubungi-kami.html',  // Nama file diperbaiki
+    '/TugasDesainWebReza/about.html',
+    '/TugasDesainWebReza/offline.html',
+    '/TugasDesainWebReza/styles.css',
 ];
 
 // Install event
